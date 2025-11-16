@@ -209,6 +209,7 @@ img{
 /* Move Up */
 .move-up{
     margin: 4rem 1rem;
+     z-index: 1;
 }  
 
 .move-up a{
@@ -227,11 +228,40 @@ img{
 	transition: all ease 0.3s;
 }
 
+.about-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('../img/about2.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; 
+}
+
+.about-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.about-section .content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.about-section h1 {
+    color: var(--color-primary);
+}
+
 /* Footer */
 footer{
     background: var(--black-transparent);
     user-select: none;
 }  
+
+footer hr {
+    color: var(--color-primary);
+}
 
 footer .link a{
     margin: 0.5rem 0;
