@@ -1,0 +1,81 @@
+:root{
+	/* Primary e Secondary*/
+    --color-primary: #7ecc47;
+    --secondary: #; 
+
+    /* Color Primary*/
+    --color-black:black;
+    --color-white: white;
+
+    /*Transparent */
+    --black-transparent: rgba(0, 0, 0, 0.8);
+    --white-transparent:rgba(255, 255, 255, .5);
+
+    /*Backgroud */
+    --color-box-shadow: rgba(0, 0, 0, 0.1);
+    --color-text-shadow:rgba(0, 0, 0, 0.5);
+
+    /* Text */
+    --primary-color-text: #333333;
+    --secondary-color-text: #dddddd;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Navbar */
+.header{
+    background: var(--black-transparent);
+    box-shadow:  0 0 10px  var(--black-transparent);
+    user-select: none;
+}
+
+.header .main-menu .nav-item .nav-link{
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 14px;
+    margin-left: 14px;
+    font-weight: 500;
+    color: var(--secondary-color-text);
+    font-size: 17px;
+}
+
+.header .navbar-brand {
+    display: flex;
+    align-items: center; 
+    gap: 8px;
+}
+
+
+.header .main-menu .navbar-brand span{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--secondary-color-text);
+    padding: 3px;
+}
+
+.header .main-menu .navbar-nav .active a{
+    background-color: var(--color-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+ 
+.header .main-menu .navbar-nav a:hover{
+    color: var(--color-primary);  
+    background-clip: text;
+    transition: .4s;
+}
