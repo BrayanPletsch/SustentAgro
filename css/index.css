@@ -1,7 +1,7 @@
 :root{
 	/* Primary e Secondary*/
     --color-primary: #7ecc47;
-    --secondary: #; 
+    --secondary: #f4f2ee; 
 
     /* Color Primary*/
     --color-black:black;
@@ -25,6 +25,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+}
+
+body {
+    background-color: var(--secondary);
 }
 
 html{
@@ -78,4 +82,85 @@ img{
     color: var(--color-primary);  
     background-clip: text;
     transition: .4s;
+}
+
+/* About */
+.about{
+    padding: 20vmin 0vmin 20vmin 0; 
+    user-select: none;
+}  
+
+.about .row .col-md-6 .pray img{ 
+    opacity: 0.9;
+    width: 80%;
+    border-radius: 0.5em;
+}  
+
+.about .row .col-md-6:last-child{
+    position: relative;
+} 
+
+.about .row .col-md-6 .panel{ 
+    position: absolute;
+    top: 5vmin;
+    left: -13vmin; 
+    background: var(--color-white);
+    border-radius: 3px; 
+    text-align: left; 
+    padding: 8vmin 8vmin 6vmin 10vmin;
+    box-shadow: 0px 25px 42px var(--color-box-shadow);
+    z-index: 500;
+}  
+
+.about .row .col-md-6 .panel h1{
+    font-weight: 700;
+    padding: 0.1em 0;
+    font-size: 2em;
+} 
+
+.about .row .col-md-6 .panel h3{
+    font-weight: 600;
+    padding: 0.1em 0;
+    font-size: 1.2em;
+} 
+
+.about .row .col-md-6 .panel p{
+    font-size: 1.0em;
+    color: var(--primary-color-text); 
+    letter-spacing: 0.5px; 
+} 
+
+.about .row .col-md-6 .panel .read-more{
+    margin: 2rem 0 1rem 0;
+} 
+
+.about .row .col-md-6 .panel .read-more a{
+    text-decoration: none;
+    color: var(--color-black);
+    border: solid 1px var(--color-black);
+    font-weight: 500;
+    border-radius: 0.2em;
+    padding: 10px 15px;
+    letter-spacing: 1px; 
+} 
+
+
+@media only screen and (max-width: 768px){
+	.about .row .col-md-6 .panel{
+	  position: initial;
+	  width: initial;
+	  height: initial;
+	}
+}  
+
+@media only screen and (max-width: 768px){
+    .testimonial .carousel-item{
+        padding-left: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .testimonial .card {
+        width: 18em;
+      }
 }
