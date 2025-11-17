@@ -12,8 +12,18 @@ $(window).on("load", function () {
         $('.preloader').fadeOut();
     }, 1000);
 
-    $('.contact-page-section').hide();
-    $('.main-page-section').show();
+    var shouldShowContact = window.location.hash && window.location.hash.toLowerCase() === '#contact';
+    if (shouldShowContact) {
+        $('.main-page-section').hide();
+        $('.contact-page-section').show();
+        var contactSection = $('#contact');
+        if (contactSection.length) {
+            $('html, body').scrollTop(contactSection.offset().top);
+        }
+    } else {
+        $('.contact-page-section').hide();
+        $('.main-page-section').show();
+    }
 
 });
 

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Login - Brulex Generoso</title>
+    <link href="img/icon/icon.png" rel="icon">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        body.login-body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem 1.5rem;
+            background: var(--secondary);
+            color: var(--primary-color-text);
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 420px;
+            background: var(--color-white);
+            border-radius: 18px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .login-logo {
+            width: 54px;
+            margin-bottom: 1rem;
+        }
+
+        .login-card h1 {
+            font-size: 1.7rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .login-card p {
+            margin-bottom: 2rem;
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            text-align: left;
+        }
+
+        .login-form label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary-color-text);
+        }
+
+        .login-form input {
+            padding: 0.85rem 1rem;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: var(--secondary);
+            color: var(--primary-color-text);
+        }
+
+        .login-form input:focus {
+            outline: 2px solid var(--color-primary);
+        }
+
+        .login-form button {
+            margin-top: 0.5rem;
+            padding: 0.95rem 1rem;
+            border: none;
+            border-radius: 12px;
+            background: var(--color-primary);
+            color: var(--color-white);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .login-form button:active {
+            transform: scale(0.98);
+        }
+
+        .login-feedback {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            color: #c62828;
+            font-weight: 600;
+            display: none;
+        }
+
+        .login-feedback.show {
+            display: block;
+            color: #c62828;
+        }
+
+        .login-back {
+            display: inline-block;
+            margin-top: 2rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body class="login-body">
+    <main class="login-card">
+        <img src="img/icon/icon.png" alt="Brulex Generoso" class="login-logo">
+        <h1>Área de Login</h1>
+        <br/>
+        <br/>
+        <br/>
+
+        <form id="login-form" class="login-form" novalidate>
+            <div>
+                <label for="email">E-mail </label>
+                <input id="email" name="email" type="email" placeholder="nome@instituicao.com" required>
+            </div>
+            <div>
+                <label for="password">Senha</label>
+                <input id="password" name="password" type="password" placeholder="********" required>
+            </div>
+            <br/>
+            <button type="submit">Entrar</button>
+            <p class="login-feedback" id="login-feedback" role="status" aria-live="polite">
+                As credenciais estão incorretas.
+            </p>
+        </form>
+
+        <a href="index.html" class="login-back">← Voltar para o início</a>
+    </main>
+
+    <script>
+        (function () {
+            const form = document.getElementById('login-form');
+            const feedback = document.getElementById('login-feedback');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                feedback.classList.add('show');
+            });
+
+            form.addEventListener('input', function () {
+                feedback.classList.remove('show');
+            });
+        })();
+    </script>
+</body>
+
+</html>
