@@ -14,7 +14,7 @@
 <body>
     <!-- =============== HEADER =============== -->
     <header class="header" id="header">
-        <nav class="nav container">
+        <nav class="nav container--navbar">
             <a href="index.html" class="nav--logo">
                 Sustent<span>Agro</span>
             </a>
@@ -27,7 +27,7 @@
                         </a>
                     </li>
                     <li class="nav--item">
-                        <a href="#" class="nav--link">
+                        <a href="#about" class="nav--link">
                             <i class="ri-arrow-right-line"></i>
                             <span>Sobre</span>
                         </a>
@@ -55,29 +55,21 @@
     <!-- =============== MAIN =============== -->
     <main>
         <style> /*temporario*/
-                body {
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: linear-gradient(135deg, #3d830e, #1e293b);
-                color: #fff;
-                }
-
                 .container-temporario {
                 text-align: center;
+                background: linear-gradient(135deg, #3d830e, #1e293b);
                 padding: 40px 60px;
-                border-radius: 16px;
-                background: rgba(255, 255, 255, 0.05);
-                backdrop-filter: blur(10px);
                 box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-                animation: fadeIn 1.2s ease-in-out;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+                
                 }
 
                .container-temporario h1 {
                 font-size: 2.5rem;
                 font-weight: 600;
-                color: #22c55e; /* verde sustentável */
+                color: #7EFF2A; /* verde sustentável */
                 margin-bottom: 10px;
                 letter-spacing: 1px;
                 }
@@ -88,22 +80,36 @@
                 color: #e2e8f0;
                 }
 
-                /* animação suave */
-                @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-                }
         </style>
         <div class="container-temporario">
             <h1>Em breve</h1>
             <div class="line"></div>
             <p>SustetAgro</p>
+        </div>
+
+        <!-- =============== About =============== -->
+        <div class="about section" id="about">
+            <div class="about-bg">
+                <div class="abount-container container grid">
+                    <div class="about-data">
+                        <h2 class="about-title">Sobre nós Saiba mais sobre o nosso projeto</h2>
+                        <p class="about-description">
+                            Somos um grupo de estudantes apaixonados por tecnologia e solidariedade, e estamos unindo esses dois mundos para criar um projeto que vai facilitar a conexão entre pessoas e ONGs. Nosso objetivo é desenvolver uma plataforma simples e eficiente, onde você possa encontrar facilmente organizações que aceitam doações <br> — seja por nome, causa ou área de interesse.
+                        </p>
+                        <p class="about-description">
+                            A ideia é tornar a busca por ONGs mais rápida e ágil, para que você possa apoiar as causas que mais têm a ver com você. Seja para ajudar na luta contra a fome, apoiar a educação, proteger o meio ambiente ou qualquer outra causa importante, nosso site vai te ajudar a encontrar a ONG certa para contribuir. 
+                        </p>
+                        <p class="about-description">
+                            <strong>Quem somos:</strong> Nosso time é formado por um grupo de amigos da faculdade que acredita no poder da colaboração. Cada um de nós tem uma habilidade diferente, e juntos estamos criando uma plataforma que vai fazer a diferença.
+                        </p>
+
+                        <a href="#">Lista ONGs
+                            <i class="ri-send-plane-2-line button-icon"></i>
+                        </a>
+                    </div>
+                    <img src="img/about.png" alt="about" class="about-img">
+                </div>
+            </div>
         </div>
     </main>
 

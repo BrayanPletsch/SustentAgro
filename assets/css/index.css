@@ -56,7 +56,7 @@ a {
 }
 
 /* =============== REUSABLE CSS CLASSES =============== */
-.container {
+.container--navbar {
     max-width: 1120px;
     margin-inline: 1.5rem;
 }
@@ -192,7 +192,7 @@ a {
 }
 
 @media screen and (min-width: 1150px) {
-    .container {
+    .container--navbar {
         margin-inline: auto;
     }
 
@@ -220,3 +220,6 @@ a {
     }
 }
 /* =============== END HEADER & NAVBAR =============== */
+
+/* =============== ABOUT =============== */
+
