@@ -110,6 +110,8 @@ a {
         justify-content: space-between;
         transition: left .4s;
     }
+
+    
 }
 
 .nav--list {
@@ -181,4 +183,10 @@ a {
 /* Show menu */
 .show-menu {
     left: 0;
+}
+
+/* animation  menu */
+.show-menu .nav--item {
+    visibility: visible;
+    transform: translateX(0);
 }
