@@ -5,8 +5,9 @@
 :root {
     --header-height: 3.5rem;
 
-    --white-color: hsl(0, 0%, 100%);
-    --black-color: hsl(0, 0%, 0%);
+    --white-color: #fff;
+    --black-color: #1d1d1d;
+    --color-primary: #7EFF2A; 
 
     /* =============== FONT AND TYPOGRAPHY =============== */
     --body-font: "Montserrat Alternates", sans-serif;
@@ -59,3 +60,95 @@ a {
     max-width: 1120px;
     margin-inline: 1.5rem;
 }
+
+/* =============== HEADER & NAVBAR =============== */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--black-color);
+    z-index: var(--z-fixed);
+}
+
+.nav {
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav--logo {
+    color: var(--white-color);
+    font-weight: var(--font-medium);
+}
+
+.nav--logo span {
+    color: var(--color-primary);
+}
+
+.nav--close, .nav--toggle {
+    display: flex;
+    color: var(--white-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* mobile navbar */
+@media screen and (max-width: 1150px) {
+    .nav--menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: var(--black-color);
+        width: 100%;
+        height: 100%;
+        padding: 6rem 3.5rem 4.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: left .4s;
+    }
+}
+
+.nav--list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+}
+
+.nav--link {
+    position: relative;
+    color: var(--white-color);
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-medium);
+    display: inline-flex;
+    align-items: center;
+    transition: opacity .4s;
+}
+
+.nav--link i {
+    font-size: 2rem;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s, visibility .4s;
+}
+
+.nav--link span {
+    position: relative;
+    transition: margin .4s;
+}
+
+.nav--link span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width .4s ease-out;
+}
+
