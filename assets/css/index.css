@@ -190,3 +190,36 @@ a {
     visibility: visible;
     transform: translateX(0);
 }
+
+@media screen and (min-width: 1150px) {
+    .container {
+        margin-inline: auto;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1rem);
+    }
+
+    .nav--toggle, .nav--close {
+        display: none;
+    }
+
+    .nav--link {
+        font-size: var(--normal-font-size);
+    }
+
+    .nav--link i {
+        font-size: 1.5rem;
+    }
+
+    .nav--list {
+        flex-direction: row;
+        column-gap: 3.5rem;
+    }
+
+    .nav--menu {
+        display: flex;
+        align-items: center;
+        column-gap: 3.5rem;
+    }
+}
