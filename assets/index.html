@@ -15,7 +15,7 @@
     <!-- =============== HEADER =============== -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav--logo">
+            <a href="index.html" class="nav--logo">
                 Sustent<span>Agro</span>
             </a>
             <div class="nav--menu" id="nav-menu">
@@ -54,7 +54,57 @@
 
     <!-- =============== MAIN =============== -->
     <main>
-        
+        <style> /*temporario*/
+                body {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: linear-gradient(135deg, #3d830e, #1e293b);
+                color: #fff;
+                }
+
+                .container-temporario {
+                text-align: center;
+                padding: 40px 60px;
+                border-radius: 16px;
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(10px);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+                animation: fadeIn 1.2s ease-in-out;
+                }
+
+               .container-temporario h1 {
+                font-size: 2.5rem;
+                font-weight: 600;
+                color: #22c55e; /* verde sustentável */
+                margin-bottom: 10px;
+                letter-spacing: 1px;
+                }
+
+                .container-temporario p {
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: #e2e8f0;
+                }
+
+                /* animação suave */
+                @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                }
+        </style>
+        <div class="container-temporario">
+            <h1>Em breve</h1>
+            <div class="line"></div>
+            <p>SustetAgro</p>
+        </div>
     </main>
 
     <!-- =============== MAIN JS =============== -->

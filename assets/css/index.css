@@ -44,7 +44,7 @@ html {
 body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    /*background-color: var(--white-color);*/
+    padding-top: var(--header-height);
 }
 
 ul {
@@ -196,10 +196,6 @@ a {
         margin-inline: auto;
     }
 
-    .nav {
-        height: calc(var(--header-height) + 1rem);
-    }
-
     .nav--toggle, .nav--close {
         display: none;
     }
@@ -223,3 +219,4 @@ a {
         column-gap: 3.5rem;
     }
 }
+/* =============== END HEADER & NAVBAR =============== */
