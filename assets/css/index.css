@@ -45,7 +45,6 @@ body {
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     padding-top: var(--header-height);
-    overflow-x: hidden;
 }
 
 ul {
@@ -53,13 +52,14 @@ ul {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 /* =============== REUSABLE CSS CLASSES =============== */
 .container--navbar {
     max-width: 1120px;
     margin-inline: 1.5rem;
+    align-content: center;
 }
 
 /* =============== HEADER & NAVBAR =============== */
@@ -80,7 +80,7 @@ a {
     align-items: center;
 }
 
-.nav--logo {
+.nav--logo, .nav--logo:hover {
     color: var(--white-color);
     font-weight: var(--font-medium);
 }
@@ -111,8 +111,6 @@ a {
         justify-content: space-between;
         transition: left .4s;
     }
-
-    
 }
 
 .nav--list {
@@ -158,6 +156,7 @@ a {
 /* Animation link on hover */
 .nav--link:hover span {
     margin-left: 2.5rem;
+    color: var(--white-color);
 }
 
 .nav--link:hover i {
@@ -224,7 +223,7 @@ a {
 
 /* =============== ABOUT =============== */
 .about {
-    padding: 0 !important;
+    padding: 4rem 0;
 }
 
 .about-bg {
