@@ -43,7 +43,7 @@ O projeto está disponível online através do link:
 ---
 
 ## 📁 Estrutura do projeto
-```bash
+
 SustentAgro/
 │
 ├── assets/            # Imagens e arquivos estáticos
