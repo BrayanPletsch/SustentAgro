@@ -43,13 +43,14 @@ O projeto está disponível online através do link:
 ---
 
 ## 📁 Estrutura do projeto
+```bash
+SustentAgro/
 │
-├── assets/ # Imagens e arquivos estáticos
-├── index.html # Página principal
-├── styles.css # Estilos da aplicação
-├── script.js # Funcionalidades em JavaScript
+├── assets/            # Imagens e arquivos estáticos
+├── index.html         # Página principal
+├── styles.css         # Estilos da aplicação
+├── script.js          # Funcionalidades em JavaScript
 └── README.md
-
 ---
 
 ## ⚙️ Como executar o projeto
