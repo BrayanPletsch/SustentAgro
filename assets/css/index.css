@@ -52,13 +52,14 @@ ul {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 /* =============== REUSABLE CSS CLASSES =============== */
 .container--navbar {
     max-width: 1120px;
     margin-inline: 1.5rem;
+    align-content: center;
 }
 
 /* =============== HEADER & NAVBAR =============== */
@@ -79,7 +80,7 @@ a {
     align-items: center;
 }
 
-.nav--logo {
+.nav--logo, .nav--logo:hover {
     color: var(--white-color);
     font-weight: var(--font-medium);
 }
@@ -110,8 +111,6 @@ a {
         justify-content: space-between;
         transition: left .4s;
     }
-
-    
 }
 
 .nav--list {
@@ -157,6 +156,7 @@ a {
 /* Animation link on hover */
 .nav--link:hover span {
     margin-left: 2.5rem;
+    color: var(--white-color);
 }
 
 .nav--link:hover i {
@@ -327,3 +327,48 @@ a {
     }
 }
 /* =============== / END ABOUT =============== */
+
+/* =============== HERO CAROUSEL =============== */
+.hero-carousel-wrapper .carousel-item img {
+    height: calc(100vh - var(--header-height));
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* Overlay */
+.hero-carousel-wrapper .carousel-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(170deg, rgba(29, 29, 29, 0.55), rgba(61, 131, 14, 0.35));
+    z-index: 1;
+}
+
+.hero-carousel-wrapper .carousel-indicators {
+    z-index: 2;
+}
+
+.hero-carousel-wrapper .carousel-indicators li {
+    background-color: var(--color-primary);
+}
+
+.hero-carousel-wrapper .carousel-control-prev,
+.hero-carousel-wrapper .carousel-control-next {
+    z-index: 2;
+}
+
+.hero-carousel-wrapper .carousel-caption {
+    z-index: 2;
+}
+
+.hero-carousel-wrapper .carousel-caption h5 {
+    font-size: 1.4rem;
+    font-weight: var(--font-medium);
+    color: var(--color-primary);
+}
+
+.hero-carousel-wrapper .carousel-caption p {
+    font-size: .95rem;
+    color: rgba(255, 255, 255, .9);
+}
+/* =============== / END HERO CAROUSEL =============== */
