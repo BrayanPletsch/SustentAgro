@@ -42,17 +42,6 @@ O projeto está disponível online através do link:
 
 ---
 
-## 📁 Estrutura do projeto
-
-SustentAgro/
-│
-├── assets/            # Imagens e arquivos estáticos
-├── index.html         # Página principal
-├── styles.css         # Estilos da aplicação
-├── script.js          # Funcionalidades em JavaScript
-└── README.md
----
-
 ## ⚙️ Como executar o projeto
 
 Este projeto não requer instalação de dependências.
