@@ -103,14 +103,36 @@ a {
         left: -100%;
         top: 0;
         background-color: var(--black-color);
-        width: 100%;
+        width: 70%;
         height: 100%;
         padding: 6rem 3.5rem 4.5rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        transition: left .4s;
+        transition: left 0.4s ease;
+        z-index: 10;
     }
+}
+
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    z-index: 5;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .nav--list {
@@ -237,6 +259,7 @@ a {
     padding: 2rem;
     background-color: var(--black-color);
     border-radius: 1rem;
+    width: calc(100% - 2rem);
 
     display: grid;
     
