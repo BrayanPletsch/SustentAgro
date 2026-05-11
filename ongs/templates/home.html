@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- =============== HERO CAROUSEL =============== -->
+<section id="home" class="hero-carousel-wrapper">
+    <div id="heroCarousel" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            {% for ong in ongs %}
+                <li
+                    data-target="#heroCarousel"
+                    data-slide-to="{{ forloop.counter0 }}"
+                    class="{% if forloop.first %}active{% endif %}">
+                </li>
+            {% endfor %}
+        </ol>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+            {% for ong in ongs %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                    <img
+                        class="d-block w-100"
+                        src="{{ ong.img.url }}"
+                        alt="{{ ong.name }}">
+                    <div class="carousel-caption d-block d-md-block">
+                        <h5>{{ ong.name }}</h5>
+                        <p>{{ ong.slogan }}</p>
+                        {% if ong.about %}
+                            <a href="{{ ong.about }}" class="btn btn-primary">Saiba mais</a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+</section>
+
+<!-- =============== About =============== -->
+<div class="about" id="about">
+    <div class="about-bg">
+        <div class="about-container grid-about">
+            <div class="about-data">
+                <h2 class="about-title">Saiba mais sobre o nosso projeto</h2>
+                <p class="about-description">
+                    Somos um grupo de estudantes apaixonados por tecnologia e solidariedade, e estamos unindo esses dois mundos para criar um projeto que vai facilitar a conexão entre pessoas e ONGs. Nosso objetivo é desenvolver uma plataforma simples e eficiente, onde você possa encontrar facilmente organizações que aceitam doações <br> — seja por nome, causa ou área de interesse.
+                </p>
+                <p class="about-description">
+                    A ideia é tornar a busca por ONGs mais rápida e ágil, para que você possa apoiar as causas que mais têm a ver com você. Seja para ajudar na luta contra a fome, apoiar a educação, proteger o meio ambiente ou qualquer outra causa importante, nosso site vai te ajudar a encontrar a ONG certa para contribuir.
+                </p>
+                <p class="about-description">
+                    <strong>Quem somos:</strong> Nosso time é formado por um grupo de amigos da faculdade que acredita no poder da colaboração. Cada um de nós tem uma habilidade diferente, e juntos estamos criando uma plataforma que vai fazer a diferença.
+                </p>
+                    <p class="about-description">
+                    <strong>Equipe do projeto:</strong>
+                </p>
+
+                <ul class="about-team">
+                    <li>Brayan Aragão Pletsch</li>
+                    <li>Jimmie Haskell Gonçalves da Silva</li>
+                    <li>Caio Vínico Nunes Vilarouca</li>
+                    <li>Gabriel Ribeiro de Carvalho</li>
+                    <li>Guilherme de Melo Lucas</li>
+                    <li>Júlia Sernagiotto Barbosa</li>
+                    <li>João Vitor de Freitas Silva</li>
+                    <li>Pedro Freire de Farias</li>
+                    <li>Vitor Hugo Alves da Silva</li>
+                </ul>
+            </div>
+            <div class="about-data">
+                <h2 class="about-title">Sobre nós</h2>
+                <p class="about-description">
+                    Cada um de nós traz algo único para o projeto, seja na parte técnica, no design, na pesquisa ou no desenvolvimento das funcionalidades. Juntos, estamos trabalhando para oferecer uma solução prática, acessível e que ajude a transformar boas intenções em ações concretas.
+                </p>
+                <p class="about-description">
+                    <strong>Nosso Compromisso:</strong> Queremos que o nosso site seja mais do que uma ferramenta de busca. Ele é uma ponte que conecta pessoas a causas que realmente importam. Acreditamos que a solidariedade é essencial para um mundo melhor, e o nosso objetivo é ajudar mais pessoas a fazerem a diferença.
+                </p>
+                <p class="about-description">
+                    Estamos empolgados com o impacto que podemos criar juntos, e esperamos que você também se junte a nós nesse movimento de transformação social!
+                </p>
+
+                <div class="about-image">
+                    <img src="{% static 'img/about.png' %}" alt="about" class="about-img">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

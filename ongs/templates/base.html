@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =============== BOOTSTRAP =============== -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- =============== STYLE =============== -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <!-- =============== ICON DE URL =============== -->
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <!-- =============== ICON =============== -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <!-- =============== HEADER =============== -->
+    <header class="header" id="header">
+        <nav class="nav container--navbar">
+            <div class="nav-overlay" id="nav-overlay"></div>
+            <a href="{% url 'index' %}" class="nav--logo">
+                Sustent<span>Agro</span>
+            </a>
+            <div class="nav--menu" id="nav-menu">
+                <ul class="nav--list">
+                    <li class="nav--item">
+                        <a href="#" class="nav--link">
+                            <i class="ri-arrow-right-line"></i>
+                            <span>Início</span>
+                        </a>
+                    </li>
+                    <li class="nav--item">
+                        <a href="#about" class="nav--link">
+                            <i class="ri-arrow-right-line"></i>
+                            <span>Sobre</span>
+                        </a>
+                    </li>
+                    <li class="nav--item">
+                        <a href="#" class="nav--link">
+                            <i class="ri-arrow-right-line"></i>
+                            <span>Lista de ONGs</span>
+                        </a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li style="display: flex; align-items: center; gap: 15px;">
+                        <a href="{% url 'admin:index' %}" class="nav--link">
+                            <i class="ri-arrow-right-line"></i>
+                            <span>Painel Administrativo</span>
+                        </a>
+                        <!-- Logout -->
+                        <form
+                            action="{% url 'logout' %}"
+                            method="post"
+                            class="d-inline">
+
+                            {% csrf_token %}
+
+                            <button
+                                type="submit"
+                                class="nav--logout border-0 bg-transparent">
+                                <span class="fa-solid fa-right-from-bracket"></span>
+                            </button>
+                        </form>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'login' %}" class="nav--link">
+                            <i class="ri-arrow-right-line"></i>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <!-- Close Button -->
+                <div class="nav--close" id="nav-close">
+                    <i class="ri-close-large-line"></i>
+                </div>
+
+            </div>
+            <!-- Toggle Button -->
+            <div class="nav--toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- =============== MAIN =============== -->
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+    <!-- =============== BOOTSTRAP JS =============== -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- =============== MAIN JS =============== -->
+    <script src="{% static 'js/mainIndex.js' %}"></script>
+    <!-- =============== TAILWIND CSS =============== -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
